@@ -40,12 +40,9 @@ Primarni fokus implementacije biće na efikasnosti, obrascima pristupa memoriji 
 #### Sekvencijalno rešenje
 Sekvencijalna implementacija će se striktno oslanjati na matematičku definiciju KAN sloja i mehanizam klizećeg prozora opisan iznad. Različite veličine ulaza i veličine bloka $n$ biće testirane, a vremena izvršavanja će biti merena i analizirana.
 
-Referentna implementacija biće realizovana u jeziku Rust, sa posebnim akcentom na:
-- eksplicitno upravljanje memorijom,
-- keš-prijateljske rasporede podataka,
-- izbegavanje nepotrebnih alokacija.
+Referentna implementacija biće realizovana u jeziku Rust-u i Python-u.
 
-Ova sekvencijalna verzija predstavljaće osnovu za sva dalja poređenja performansi.
+Ove sekvencijale verzije predstavljaće osnovu za sva dalja poređenja performansi.
 
 #### Paralelno rešenje
 Paralelno rešenje biće zasnovano na prostornoj dekompoziciji ulazne matrice. Ulazna slika biće podeljena na nezavisne podregije, pri čemu će svaku regiju obrađivati zasebna nit. Posebna pažnja biće posvećena tome da svaki klizeći prozor u potpunosti pripada jednoj podregiji, kako bi se izbegle zavisnosti između niti.
@@ -55,7 +52,7 @@ Ključni aspekti strategije paralelizacije uključuju:
 - pažljivo rukovanje padding regionima,
 - minimizaciju troškova sinhronizacije.
 
-Implementacija će koristiti niti i sinhronizacione primitive jezika Rust samo tamo gde je neophodno, uz težnju ka „embarrassingly parallel“ izvršavanju. Uticaj veličine bloka $n$, veličine ulaza i broja niti na performanse biće sistematski ispitan.
+Rešenja će biti implementirana u jezicima Python (korišćenjem multiproccessing biblioteke) i Rust (korišćenjem niti). Uticaj veličine bloka $n$, veličine ulaza i broja niti na performanse biće sistematski ispitan.
 
 #### Eksperimenti jakog i slabog skaliranja
 Biće sprovedeni eksperimenti jakog i slabog skaliranja:
