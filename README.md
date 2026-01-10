@@ -1,6 +1,6 @@
 # HPC KANNet - Rust implementation of the KANNet module
 [![Srpski](img.shields.io)](README.md)
-[![English](img.shields.io)](README.en.md)S
+[![English](img.shields.io)](README.en.md)
 
 Originalna struktura modula: https://github.com/Lija321/KANNet
 
