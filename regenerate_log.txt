@@ -1,0 +1,64 @@
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_16.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_24.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_32.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_40.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_48.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_56.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_64.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_80.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_88.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_96.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_112.csv
+Wrote:
+- input: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_128.csv
+Wrote:
+- params: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/paper_kan_params_in4_out8_G5_k3_kernel2/params.json
+Wrote:
+- params: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/paper_kan_params_in9_out8_G5_k3_kernel3/params.json
+Wrote:
+- params: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/paper_kan_params_in25_out8_G5_k3_kernel5/params.json
+Wrote:
+- params: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/paper_kan_params_in49_out8_G5_k3_kernel7/params.json
+== benchmark_sizes_kernels (Python) ==
+Wrote 44 rows to /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/outputs/sizes_kernels/python/workers4/sizes_kernels.csv
+== benchmark_sizes_kernels (Rust, --release) ==
+Wrote 44 rows to /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/outputs/sizes_kernels/rust/workers4/sizes_kernels.csv
+== benchmark_scaling strong128_weakbase64 (Python, runs=30) ==
+Wrote 6 rows to /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/outputs/scaling/kernel3/strong128/weakbase64/python_scaling.csv
+Wrote tables to /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/outputs/scaling/kernel3/strong128/weakbase64/python_scaling_tables.md
+== benchmark_scaling strong128_weakbase64 (Rust, runs=30) ==
+Wrote 6 rows to /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/outputs/scaling/kernel3/strong128/weakbase64/rust_scaling.csv
+Wrote tables to /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/outputs/scaling/kernel3/strong128/weakbase64/rust_scaling_tables.md
+== benchmark_scaling strong512_weakbase256 (Python, runs=30) ==
+Traceback (most recent call last):
+  File "/home/dejan/Documents/Fakultet/NTP/HPC-KANNet/python_implementation/benchmark_scaling.py", line 331, in <module>
+    main()
+  File "/home/dejan/Documents/Fakultet/NTP/HPC-KANNet/python_implementation/benchmark_scaling.py", line 230, in main
+    x_strong = load_csv_seq(args.data_dir / args.strong_input)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dejan/Documents/Fakultet/NTP/HPC-KANNet/python_implementation/sequential.py", line 11, in load_csv
+    return np.loadtxt(path, delimiter=",").astype(np.float32, copy=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dejan/.pyenv/versions/3.12.12/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 1395, in loadtxt
+    arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dejan/.pyenv/versions/3.12.12/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 1022, in _read
+    fh = np.lib._datasource.open(fname, 'rt', encoding=encoding)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dejan/.pyenv/versions/3.12.12/lib/python3.12/site-packages/numpy/lib/_datasource.py", line 192, in open
+    return ds.open(path, mode, encoding=encoding, newline=newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dejan/.pyenv/versions/3.12.12/lib/python3.12/site-packages/numpy/lib/_datasource.py", line 529, in open
+    raise FileNotFoundError(f"{path} not found.")
+FileNotFoundError: /home/dejan/Documents/Fakultet/NTP/HPC-KANNet/data/input_matrix_512.csv not found.

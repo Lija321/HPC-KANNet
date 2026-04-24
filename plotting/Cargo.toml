@@ -1,0 +1,12 @@
+[package]
+name = "kannet_plotting"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1"
+csv = "1"
+serde = { version = "1", features = ["derive"] }
+plotters = "0.3"
+clap = { version = "4", features = ["derive"] }
+
